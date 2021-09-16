@@ -5,6 +5,8 @@ const About= ()=>{
 
         <div>
             <h1>This is about Page</h1>
+            <h1>This is about Page 22</h1>
+
         </div>
     );
 }
