@@ -5,7 +5,6 @@ function App() {
     <>
     <h1>Hello</h1>
     <About/>
-    <h1>Abhishek Patil</h1>
     </>
   )
 };
