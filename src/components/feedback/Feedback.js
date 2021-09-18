@@ -2,10 +2,9 @@ import React from 'react'
 import '../feedback/Feedback.css'
 function Feedback() {
     return (
-        <div className ="main">
-
-            <h2>Feedback Form</h2>
-
+        <div className="m-5 box">
+            <h2 className="text-center mb-5">Feedback Form</h2>
+            <div className ="main">
             <form className="row g-3 m-3">
                 <div className="col-md-4">
                     <label for="validationDefault01" className="form-label">First name</label>
@@ -26,9 +25,6 @@ function Feedback() {
                         <input type="email" className="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required/>
                     </div>
                 </div>
-            </form>
-
-            <form className="row g-3 m-3">
                 <div className="col-md-4">
                     <label for="validationDefaultUsername" className="form-label">Mobile Number</label>
                     <div className="input-group">
@@ -45,9 +41,6 @@ function Feedback() {
                         <input type="text" className="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required/>
                     </div>
                 </div>
-            </form>
-
-            <form className="row g-3 m-3">    
                 <div className="col-md-6">
                     <label for="validationDefault03" className="form-label">City</label>
                     <input type="text" className="form-control" id="validationDefault03" required/>
@@ -55,7 +48,7 @@ function Feedback() {
             </form>
 
             <form className="row g-3 m-3">
-                <div className="col-md-3">
+                <div className="col-md-6">
                     <label for="validationDefault05" className="form-label">Feedback</label>
                     <textarea className="form-control" aria-label="With textarea"></textarea>
                 </div>
@@ -66,7 +59,7 @@ function Feedback() {
                     <button className="btn btn-primary" type="submit">Submit form</button>
                 </div>
             </form>
-
+            </div>
         </div>
     )
 }

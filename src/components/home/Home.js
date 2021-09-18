@@ -3,6 +3,7 @@ import s1 from '../images/slider1.jpg';
 function Home() {
     return (
         <div>
+<<<<<<< HEAD
             <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
   <div className="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -42,6 +43,9 @@ function Home() {
     <span className="visually-hidden">Next</span>
   </button>
 </div>
+=======
+            <h1>Hello Home</h1>
+>>>>>>> 31f514b2ad47861c2c86bc03250710b0b5708098
         </div>
         
     )

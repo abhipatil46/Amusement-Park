@@ -2,13 +2,14 @@
     height: 400px;
     /* width: 100vw; */
     overflow-y: scroll;
-    background-color: rgba(0,0,0,0.2);
-    color: white;
-
+    border-radius: 30px;
 
 }
 .offer-div .card-h{
     height: 200px;
-    background-color: rgba(32, 30, 30, 0.925);
+}
+.offer-data{
+    background-color: orange;
     color: white;
+    padding: 60px;
 }
