@@ -7,10 +7,10 @@ import i3 from '../images/aboutimg3.jpg'
 const About= ()=>{
     return(
        
-        <div className="container">
+        <div className="container"> 
             <center>
-       <h1>About us</h1>
-       <hr></hr>
+       <h1 className="m-2">About us</h1>
+       <hr className="border border-dark bg-dark"/>
        </center>
         <div className="row">
                 <img className=" col imgs m-3" src={i1} alt="load img"/>
@@ -35,9 +35,7 @@ const About= ()=>{
                      </p>
                 </div>
                </div>
-            
-
-        
+               <hr className="border border-dark bg-dark"/>
         </div>
         
     );

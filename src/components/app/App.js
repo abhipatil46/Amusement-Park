@@ -4,17 +4,26 @@ import Home from '../home/Home';
 import Offers from '../offers/Offers';
 import Feedback from '../feedback/Feedback';
 import Admin from '../admin/Admin';
+import Footer from '../footer/Footer';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 function App() {
   return (
-    <>
-     <Navbar/>
-     <Home/>
-    <About/>
-    <Offers/>
+    <Router>
+      <Navbar />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/offers" component={Offers} />
+        <Route path="/feedback" component={Feedback} />
+        <Route path="/admin" component={Admin} />
+      </Switch>
+      {/* <Home/>/ */}
+      {/* <About/> */}
+      {/* <Offers/>
     <Feedback/>
-    <Admin/>
-
-    </>
+    <Admin/> */}
+      <Footer />
+    </Router>
   )
 };
 
