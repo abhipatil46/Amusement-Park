@@ -1,8 +1,11 @@
+html{
+    scroll-behavior: smooth;
+}
 .offer-div{
     height: 400px;
     /* width: 100vw; */
-    overflow-y: scroll;
-    border-radius: 30px;
+    overflow-y: auto;
+    border-radius: 10px;
 
 }
 .offer-div .card-h{
@@ -12,4 +15,10 @@
     background-color: orange;
     color: white;
     padding: 60px;
+    border-radius: 20px;
+}
+
+.hedding{
+    color:gray;
+    text-shadow: 1px 1px  rgb(83, 73, 63) ;
 }
