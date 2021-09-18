@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import getOffersData from '../offers/OffersData';
+import React, { useState, useEffect } from 'react';
+import {getOffersData} from '../offers/OffersData';
 import '../css/Offers.css';
 import { Link } from 'react-router-dom';
 
@@ -21,7 +21,7 @@ function Offers() {
         <>
             <div className="container">
                 <h1 className="text-center m-5 hedding" >Letest Offers</h1>
-                <div className="offer-data">
+                <div className="offer-data p-5">
                     <h1 className="text-center mb-5">Things to know Before You Bye</h1>
                     <div className="row">
                         <div className="col-6 p-4">
@@ -57,7 +57,7 @@ function Offers() {
                     )}
                 </div>
             </div>
-            <div id="bookTicket">
+            <div id="bookTicket" className="mb-5">
                 <center>
                     <h1 className="m-3 hedding">Book Tickets at Great Offers</h1>
                     <div className="container mt-5 mb-1 border border-primary p-3 w-50">

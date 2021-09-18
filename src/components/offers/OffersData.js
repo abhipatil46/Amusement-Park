@@ -14,35 +14,22 @@ let offersData=[
         "name":"Water Park",
         "price":"1999",
         info:"Water info will come over Here"
-    },
-    {   "id":3,
-        "name":"Water Park",
-        "price":"1999",
-        info:"Water info will come over Here"
-    },
-    {   "id":4,
-        "name":"Water Park",
-        "price":"1999",
-        info:"Water info will come over Here"
-    },
-    {   "id":5,
-        "name":"Water Park",
-        "price":"1999",
-        info:"Water info will come over Here"
-    }
-    ,{   "id":6,
-    "name":"Water Park",
-    "price":"1999",
-    info:"Water info will come over Here"
-},
-{   "id":7,
-        "name":"Water Park",
-        "price":"1999",
-        info:"Water info will come over Here"
     }
 ];
-function getOffersDate(){
+
+let SaveOffers = (offer) =>{
+    try {
+        console.clear();
+        console.log("Data = " + JSON.stringify(offer, null, 3));
+        offersData.push(offer);
+    }
+    catch (exception) {
+        console.log("rootURL is not correct");
+    }
+}
+
+function getOffersData(){
     return offersData;
 }
 
-export default getOffersDate;
+export {getOffersData , SaveOffers};

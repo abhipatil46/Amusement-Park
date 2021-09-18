@@ -3,9 +3,10 @@ import About from '../about/about'
 import Home from '../home/Home';
 import Offers from '../offers/Offers';
 import Feedback from '../feedback/Feedback';
-import Admin from '../admin/Admin';
+import AdminLogin from '../admin/AdminLogin';
 import Footer from '../footer/Footer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import AdminDashboard from '../admin/AdminDashboard';
 function App() {
   return (
     <Router>
@@ -15,7 +16,8 @@ function App() {
         <Route path="/about" component={About} />
         <Route path="/offers" component={Offers} />
         <Route path="/feedback" component={Feedback} />
-        <Route path="/admin" component={Admin} />
+        <Route path="/AdminLogin" component={AdminLogin} />
+        <Route path="/AdminDashboard" component={AdminDashboard} />
       </Switch>
       {/* <Home/>/ */}
       {/* <About/> */}

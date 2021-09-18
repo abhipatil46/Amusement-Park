@@ -31,7 +31,7 @@ function Navbar() {
               <a className="nav-link text-decoration-none" href="#">Feedback</a>
             </li>
             </Link>
-            <Link to="/admin">
+            <Link to="/AdminLogin">
             <li className="nav-item">
               <a className="nav-link text-decoration-none" href="#">Admin</a>
             </li>
