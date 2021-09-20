@@ -13,7 +13,7 @@ let offersData=[
     {   "id":2,
         "name":"Water Park",
         "price":"1999",
-        info:"Water info will come over Here"
+        "info":"Water info will come over Here"
     }
 ];
 
