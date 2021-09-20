@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import {getCustomerData , SaveCustomer} from '../offers/CustomerData';
+
 import {getOffersData} from '../offers/OffersData';
 import '../css/Offers.css';
 import { Link } from 'react-router-dom';
@@ -6,15 +8,27 @@ import { Link } from 'react-router-dom';
 function Offers() {
     let [costomerOffer, setOffer] = useState([]);
     let [selectedRowState, cbSelectedRow] = useState({});
+    
     useEffect(() => {
         setOffer(getOffersData());
     }, []);
+
     let onBookTicketClick = (event) => {
         cbSelectedRow(costomerOffer[event.target.id]);
     }
     let ticketStatus = () => {
         let status = document.getElementById("statusDiv");
         status.style.display="block";
+        onSaveCustomer();
+    }
+
+    let[custemerData,setCustomerData]=useState([]);
+    let onChangeHandle=(event)=>{
+        setCustomerData({...custemerData,[event.target.name]:event.target.value});
+        console.log(custemerData);
+    }
+    let onSaveCustomer=()=>{
+        SaveCustomer(custemerData);
     }
 
     return (
@@ -65,49 +79,39 @@ function Offers() {
                             <div className="form-row">
                                 <div className="form-group col-md-6">
                                     <label for="inputEmail4">Full Name</label>
-                                    <input type="text" className="form-control" id="inputEmail4" />
+                                    <input type="text" onChange={onChangeHandle} name="fname" className="form-control" id="inputEmail4" />
                                 </div>
                                 <div className="form-group col-md-6">
                                     <label for="inputPassword4">Pan card</label>
-                                    <input type="text" className="form-control" id="inputPassword4" />
+                                    <input type="text"  onChange={onChangeHandle} name="panCard"  className="form-control" id="inputPassword4" />
                                 </div>
                             </div>
                             <div className="form-row">
                                 <div className="form-group col-md-6">
                                     <label for="inputPassword4">Selected Offer</label>
-                                    <input type="text" value={selectedRowState["name"]} disabled className="form-control" id="inputPassword4" />
+                                    <input type="text"  onChange={onChangeHandle} value={selectedRowState["name"]} disabled name="selectedOffer" className="form-control" id="inputPassword4" />
                                 </div>
                                 <div className="form-group col-md-6">
                                     <label for="inputEmail4">price</label>
-                                    <input type="number" value={selectedRowState["price"]} disabled className="form-control" id="inputEmail4" />
+                                    <input type="number"  onChange={onChangeHandle} value={selectedRowState["price"]} disabled name="price" className="form-control" id="inputEmail4" />
                                 </div>
                             </div>
                             <div className="form-group">
                                 <label for="inputAddress">Address</label>
-                                <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St " />
+                                <input type="text"  onChange={onChangeHandle} name="address"  className="form-control" id="inputAddress" placeholder="1234 Main St " />
                             </div>
                             <div className="form-row">
                                 <div className="form-group col-md-6">
                                     <label for="inputCity">City</label>
-                                    <input type="text" className="form-control" id="inputCity " />
+                                    <input type="text"  onChange={onChangeHandle} name="city" className="form-control" id="inputCity " />
                                 </div>
-                                <div className="form-group col-md-4">
-                                    <label for="inputState">State</label>
-                                    <select id="inputState" className="form-control">
-                                        <option selected>Choose...</option>
-                                        <option>Maharashtra</option>
-                                        <option>Karnataka</option>
-                                        <option>Bihar</option>
-                                        <option>Tamilnadu</option>
-                                        <option>Madhya Pradhesh</option>
-                                    </select>
-                                </div>
+                                
                                 <div className="form-group col-md-2">
                                     <label for="inputZip">Zip</label>
-                                    <input type="text" className="form-control" id="inputZip " />
+                                    <input type="text"  onChange={onChangeHandle} name="zip" className="form-control" id="inputZip " />
                                 </div>
                             </div>
-                            <button type="submit" className="btn btn-success m-5 col-6" onClick={ticketStatus}>Book Ticket</button>
+                            <button type="button" className="btn btn-success m-5 col-6" onClick={ticketStatus}>Book Ticket</button>
                         </form>
                     </div>
                     <div class="alert alert-success mb-5 w-50" style={{display:'none'}} id="statusDiv" role="alert">
