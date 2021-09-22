@@ -19,11 +19,6 @@ function App() {
         <Route path="/AdminLogin" component={AdminLogin} />
         <Route path="/AdminDashboard" component={AdminDashboard} />
       </Switch>
-      {/* <Home/>/ */}
-      {/* <About/> */}
-      {/* <Offers/>
-    <Feedback/>
-    <Admin/> */}
       <Footer />
     </Router>
   )

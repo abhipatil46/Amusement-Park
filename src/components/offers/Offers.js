@@ -71,9 +71,13 @@ function Offers() {
                     )}
                 </div>
             </div>
+           
             <div id="bookTicket" className="mb-5">
                 <center>
                     <h1 className="m-3 hedding">Book Tickets at Great Offers</h1>
+                    <div class="alert alert-success mb-5 w-50" style={{display:'none'}} id="statusDiv" role="alert">
+                        Ticket Booked Successfully!!
+                    </div>
                     <div className="container mt-5 mb-1 border border-primary p-3 w-50">
                         <form>
                             <div className="form-row">
@@ -114,9 +118,7 @@ function Offers() {
                             <button type="button" className="btn btn-success m-5 col-6" onClick={ticketStatus}>Book Ticket</button>
                         </form>
                     </div>
-                    <div class="alert alert-success mb-5 w-50" style={{display:'none'}} id="statusDiv" role="alert">
-                        Ticket Booked Successfully!!
-                    </div>
+                    
                 </center>
             </div>
 

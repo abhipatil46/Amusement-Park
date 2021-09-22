@@ -2,7 +2,6 @@
     import { Link } from 'react-router-dom';
     import '../admin/Admin.css';
 
-
     let adminLogin=
     {
         'email':'admin@gmail.com',
@@ -23,32 +22,29 @@
             let [loginData,setLoginData]=useState({});
 
             let onHandleChange=(event)=>{
-                console.log("Data = " + JSON.stringify(loginData));
-                console.log(loginData.email, adminLogin.email)
                 setLoginData({...loginData,[event.target.name]:event.target.value})
             }
 
-            let onLogin = () => {
+            let verifyAdmin=()=>{
                 let alertDiv = document.getElementById("alertDiv");
                 let alertDivSuccess = document.getElementById("alertDivSuccess");
                 let Dashboard = document.getElementById("Dashboard");
 
-                let email = document.getElementById("exampleInputEmail1").value;
-                let pass = document.getElementById("exampleInputPassword1").value;
-
-
                 // Varification Code 
-                if(loginData.email == adminLogin.email && loginData.pass == adminLogin.pass)
+                if((loginData.pass == adminLogin.pass) && (loginData.email == adminLogin.email))
                 {
                     alertDiv.style.display = "none";
                     alertDivSuccess.style.display = "block";
                     Dashboard.style.display = "block";
                 }
                 else{
-                    alert("Invalid Input , You Must add appropriate email & Password");
-                    console.log("Abhi")
                         alertDiv.style.display = "block";
                 }
+
+            }
+
+            let onLogin = () => {
+                verifyAdmin();
         }
 
             return (
