@@ -37,7 +37,7 @@ function Home() {
       {/* <hr style={{border:"2px solid yellow,margin:0px"}} /> */}
       <div className="home-info mb-5 m-5">
         <h1>Make Waves.</h1>
-        <p className="">An interesting and fun water park in India, Wonderla is a favourite among young kids as well as older
+        <p className="">An interesting and fun water park in Maharastra, Wonderla is a favourite among young kids as well as older
           people for the variety of rides they offer. The park has both a water park and theme park, but unlike
           most combined parks, there hasn't been a cut in the number of rides of both types. Many find it
           difficult to finish all the rides in one day but come out having the best time. The park has
