@@ -1,7 +1,10 @@
 import React,{useState} from 'react'
 import '../feedback/Feedback.css'
 import { SaveFeedback} from '../feedback/FeedbackData';
+import FeedbackService from './FeedbackService';
 function Feedback() {
+
+
         let [feedbackState, cbFeedbackState]=useState({});
         let onChangeHandle=(event)=>{
             cbFeedbackState({...feedbackState,[event.target.name]:event.target.value});
@@ -9,6 +12,8 @@ function Feedback() {
         }
         let onSubmitForm=()=>{
             SaveFeedback(feedbackState);
+            FeedbackService.saveFeedbackData(feedbackState).then(res=>{
+            })
         }
 
 

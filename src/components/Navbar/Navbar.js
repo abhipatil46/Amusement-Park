@@ -16,14 +16,14 @@ function Navbar() {
               <a className="nav-link text-decoration-none" href="#">Home <span className="sr-only">(current)</span></a>
             </li>
             </Link>
-            <Link to="/offers">
-            <li className="nav-item">
-              <a className="nav-link text-decoration-none" href="#">Offers</a>
-            </li>
-            </Link>
             <Link to="/About">
             <li className="nav-item">
               <a className="nav-link text-decoration-none" href="#">About</a>
+            </li> 
+            </Link>
+            <Link to="/offers">
+            <li className="nav-item">
+              <a className="nav-link text-decoration-none" href="#">Offers</a>
             </li>
             </Link>
             <Link to="/feedback">
