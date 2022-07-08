@@ -7,7 +7,7 @@ let FeedbackData=[
         "lname":"Joshi",
         "email":"revati1234@gmail.com",
         "mobile":"1234567890",
-        "panNumber":"df1368gh777",
+        "pancard":"df1368gh777",
         "city":"Pune",
         "feedback": "offers are good",
     }

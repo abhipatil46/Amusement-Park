@@ -13,6 +13,7 @@ function Feedback() {
         let onSubmitForm=()=>{
             SaveFeedback(feedbackState);
             FeedbackService.saveFeedbackData(feedbackState).then(res=>{
+                console.log(feedbackState);
             })
         }
 
@@ -46,7 +47,7 @@ function Feedback() {
                     <label for="validationDefaultUsername" className="form-label">Mobile Number</label>
                     <div className="input-group">
                         <span className="input-group-text" id="inputGroupPrepend2">91</span>
-                        <input type="number" max ="10" className="form-control" id="validationDefaultUsername" onChange={onChangeHandle} name = "mobile"  aria-describedby="inputGroupPrepend2" required/>
+                        <input type="text" max ="10" className="form-control" id="validationDefaultUsername" onChange={onChangeHandle} name = "mobile"  aria-describedby="inputGroupPrepend2" required/>
                     </div>
                 </div>
             </form>
@@ -55,7 +56,7 @@ function Feedback() {
                 <div className="col-md-4">
                     <label for="validationDefaultUsername" className="form-label">Pan Number</label>
                     <div className="input-group">
-                        <input type="text" className="form-control" id="validationDefaultUsername" onChange={onChangeHandle} name = "panNumber"aria-describedby="inputGroupPrepend2" required/>
+                        <input type="text" className="form-control" id="validationDefaultUsername" onChange={onChangeHandle} name = "pancard" aria-describedby="inputGroupPrepend2" required/>
                     </div>
                 </div>
                 <div className="col-md-6">
